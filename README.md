@@ -1,5 +1,4 @@
 # magento2-twitter-card
-Here’s a clean and simple `README.md` (you can rename to `README.txt` if needed, but GitHub prefers `README.md`):
 
 ---
 
