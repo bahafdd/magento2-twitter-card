@@ -65,7 +65,7 @@ There you can:
 ## Customization
 
 **Template File:**
-`view/frontend/templates/meta/twitter.phtml`
+`view/frontend/templates/meta/twitter_meta.phtml`
 
 To override it, copy it to your theme and adjust as needed.
 
