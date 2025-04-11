@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="themestar" translate="label" sortOrder="100">
+            <label>Themestar</label>
+        </tab>
+        <section id="xcard_settings" translate="label" sortOrder="900" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Twitter Card</label>
+            <tab>themestar</tab>
+            <resource>Magento_Backend::admin</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Card</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="username" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Username</label>
+                </field>
+
+                <field id="author" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Author</label>
+                </field>
+
+                <field id="cms_card_type" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Card Type for CMS-Pages</label>
+                    <source_model>Themestar\Xcard\Model\Config\Source\CardType</source_model>
+                </field>
+
+                <field id="category_card_type" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Card Type for Categories</label>
+                    <source_model>Themestar\Xcard\Model\Config\Source\CardType</source_model>
+                </field>
+
+                <field id="product_card_type" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Card Type for Products</label>
+                    <source_model>Themestar\Xcard\Model\Config\Source\CardType</source_model>
+                </field>
+
+                <field id="use_thumbnail" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Thumbnail Image for Summary Card</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="fallback_image" translate="label" type="image" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fallback Image (png, jpg or gif)</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">xcard</upload_dir>
+                    <base_url type="media" scope_info="1">xcard/</base_url>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

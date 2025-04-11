@@ -1,0 +1,26 @@
+<?php
+$twitterData = $block->getTwitterData();
+if (empty($twitterData)) {
+    return;
+}
+?>
+
+<meta name="twitter:card" content="<?= $escaper->escapeHtml($twitterData['card_type']) ?>" />
+<meta name="twitter:site" content="@<?= $escaper->escapeHtml($twitterData['username']) ?>" />
+<meta name="twitter:creator" content="<?= $escaper->escapeHtml($twitterData['author']) ?>" />
+
+<?php if (!empty($twitterData['title'])): ?>
+    <meta name="twitter:title" content="<?= $escaper->escapeHtml($twitterData['title']) ?>" />
+<?php endif; ?>
+
+<?php if (!empty($twitterData['description'])): ?>
+    <meta name="twitter:description" content="<?= $escaper->escapeHtml($twitterData['description']) ?>" />
+<?php endif; ?>
+
+<?php if (!empty($twitterData['image'])): ?>
+    <meta name="twitter:image" content="<?= $escaper->escapeUrl($twitterData['image']) ?>" />
+<?php elseif (!empty($twitterData['fallback_images'])): ?>
+    <?php foreach ($twitterData['fallback_images'] as $img): ?>
+        <meta name="twitter:image" content="<?= $escaper->escapeUrl($img) ?>" />
+    <?php endforeach; ?>
+<?php endif; ?>
