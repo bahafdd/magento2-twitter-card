@@ -2,7 +2,7 @@
 
 ---
 
-```markdown
+
 # Magento 2 Twitter Card Module – Themestar_Xcard
 
 This module adds Twitter Card meta tags (Summary, Summary Large Image, App, Player) to your Magento 2 store's frontend pages for better social sharing previews.
@@ -31,7 +31,6 @@ This module adds Twitter Card meta tags (Summary, Summary Large Image, App, Play
 php bin/magento module:enable Themestar_Xcard
 php bin/magento setup:upgrade
 php bin/magento cache:flush
-```
 
 ### Method 2: Composer (coming soon)
 
