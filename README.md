@@ -27,7 +27,7 @@ This module adds Twitter Card meta tags (Summary, Summary Large Image, App, Play
 1. Copy the folder `Themestar/Xcard` into `app/code/Themestar/Xcard`
 2. Run:
 
-```bash
+
 php bin/magento module:enable Themestar_Xcard
 php bin/magento setup:upgrade
 php bin/magento cache:flush
