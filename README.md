@@ -56,8 +56,8 @@ There you can:
 
 - `summary`
 - `summary_large_image`
-- `app` *(for mobile apps - not yet used)*
-- `player` *(for videos - not yet used)*
+- `app` *(for mobile apps )*
+- `player` *(for videos )*
 
 ---
 
